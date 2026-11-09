@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "agent-redteam-scanner"
-version = "0.1.0"
+version = "0.1.1"
 description = "Fuzzes your own agents for prompt injection and tool abuse — scanner, payloads, and patch reports."
 readme = "README.md"
 requires-python = ">=3.11"
