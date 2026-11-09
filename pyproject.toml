@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-redteam-scanner"
+version = "0.1.0"
+description = "Fuzzes your own agents for prompt injection and tool abuse — scanner, payloads, and patch reports."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Lionel Sim", email = "lionel@theaicapitol.com" }]
+keywords = ["agents", "red-team", "prompt-injection", "security", "llm"]
+classifiers = ["Programming Language :: Python :: 3", "License :: OSI Approved :: MIT License"]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/lionelsimai/agent-redteam-scanner"
+Repository = "https://github.com/lionelsimai/agent-redteam-scanner"
+Issues = "https://github.com/lionelsimai/agent-redteam-scanner/issues"
+
+[project.scripts]
+agent-redteam = "agent_redteam_scanner.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
